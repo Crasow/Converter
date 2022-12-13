@@ -6,9 +6,10 @@
 
     <FlyoutItem Title="MainPage">
         <Tab>
-            <ShellContent Title="About" Icon="xxx.png" ContentTemplate="{DataTemplate local:AboutPage}" />
-            <ShellContent Title="Browse" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:ItemsPage}"/>
-            <ShellContent Title="Конвертор" ContentTemplate="{DataTemplate local:LoginPage}" />
+            <ShellContent Title="Чат" Icon="xxx.png" ContentTemplate="{DataTemplate local:MainPage}" />
+            <ShellContent Title="Звонки" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:ItemsPage}"/>
+            <ShellContent Title="Карта" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:ItemsPage}"/>
+            <ShellContent Title="Конвертер" ContentTemplate="{DataTemplate local:ConverterPage}" />
         </Tab>
     </FlyoutItem>
 
@@ -27,5 +28,24 @@
             <ContentPage Title="Fuck"/>
         </ShellContent>
     </FlyoutItem>
+    
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="{StaticResource TextColor}" />
+                <Setter Property="Shell.DisabledColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+        </ResourceDictionary>
+    </Shell.Resources>
 
 </Shell>

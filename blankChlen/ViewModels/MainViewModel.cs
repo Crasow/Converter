@@ -5,11 +5,11 @@ using Xamarin.Forms;
 
 namespace blankChlen.ViewModels
 {
-    public class AboutViewModel : BaseViewModel
+    public class MainViewModel : BaseViewModel
     {
-        public AboutViewModel()
+        public MainViewModel()
         {
-            Title = "About";
+            Title = "Main";
             OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
         }
 

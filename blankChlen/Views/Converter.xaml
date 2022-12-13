@@ -4,12 +4,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              Title="Конвертер"
-             x:Class="blankChlen.Views.LoginPage"
-             Shell.NavBarIsVisible="True">
+             x:Class="blankChlen.Views.ConverterPage"
+             BackgroundColor="#1C1C1E">
     
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="+"/>
+        <ToolbarItem Text="ADD"/>
     </ContentPage.ToolbarItems>
 
     <StackLayout>

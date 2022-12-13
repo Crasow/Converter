@@ -11,18 +11,18 @@ using Xamarin.Forms.Xaml;
 namespace blankChlen.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class ConverterPage : ContentPage
     {
-        public LoginPage()
+        public ConverterPage()
         {
             InitializeComponent();
-            this.BindingContext = new LoginViewModel();
+            this.BindingContext = new ConverterViewModel();
         }
 
         Label header;
         //Xamarin.Forms.Picker picker;
 
-        public void MainPage()
+        public void Main()
         {
             header = new Label
             {
