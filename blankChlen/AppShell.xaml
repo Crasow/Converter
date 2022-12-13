@@ -1,0 +1,31 @@
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:blankChlen.Views"
+       Title="blankChlen"
+       x:Class="blankChlen.AppShell">
+
+    <FlyoutItem Title="MainPage">
+        <Tab>
+            <ShellContent Title="About" Icon="xxx.png" ContentTemplate="{DataTemplate local:AboutPage}" />
+            <ShellContent Title="Browse" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:ItemsPage}"/>
+            <ShellContent Title="Конвертор" ContentTemplate="{DataTemplate local:LoginPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Settings">
+        <ShellContent>
+            <ContentPage Title="Settings"/>
+        </ShellContent>
+    </FlyoutItem>
+    <FlyoutItem Title="Porn">
+        <ShellContent>
+            <ContentPage Title="Porn"/>
+        </ShellContent>
+    </FlyoutItem>
+    <FlyoutItem Title="Fuck">
+        <ShellContent>
+            <ContentPage Title="Fuck"/>
+        </ShellContent>
+    </FlyoutItem>
+
+</Shell>

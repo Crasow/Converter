@@ -1,0 +1,26 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Конвертер"
+             x:Class="blankChlen.Views.LoginPage"
+             Shell.NavBarIsVisible="True">
+    
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <Picker x:Name="picker" Title="Выбери величину" FontSize="Large" SelectedIndexChanged="Picker_SelectedIndexChanged">
+            <Picker.Items>
+                <x:String>Метры</x:String>
+                <x:String>Километры</x:String>
+                <x:String>Ярды</x:String>
+            </Picker.Items>
+        </Picker>
+        <Label x:Name="Debug" Text="Debug" FontSize="20" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>
+    </StackLayout>
+
+</ContentPage>
