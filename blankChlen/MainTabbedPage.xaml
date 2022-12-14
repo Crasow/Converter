@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="blankChlen.MainTabbedPage"
+            xmlns:local ="clr-namespace:blankChlen.Views"
+            BarBackgroundColor="Black"
+            SelectedTabColor="White"
+            UnselectedTabColor="White"
+            Title="Не меняется, зараза"
+            
+            x:Name="Tabber">
+    <!--Pages can be added as references or inline-->
+
+    <TabbedPage.Children>
+        <local:ChatPage Focused="ChatPage_Focused" IconImageSource="ChatCircleText.svg"/>
+        <local:CallPage Focused="CallPage_Focused" IconImageSource="PhoneCall.svg"/>
+        <local:CallPage Focused="CallPage_Focused_1" IconImageSource="MapTrifold.svg"/>
+        <local:ConverterPage Focused="ConverterPage_Focused" IconImageSource="MathOperations.svg"/>
+    </TabbedPage.Children>
+
+</TabbedPage>

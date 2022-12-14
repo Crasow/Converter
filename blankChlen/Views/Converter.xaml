@@ -3,9 +3,9 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             Title="Конвертер"
              x:Class="blankChlen.Views.ConverterPage"
-             BackgroundColor="#1C1C1E">
+             BackgroundColor="#1C1C1E"
+             Title="Конверт">
     
 
     <ContentPage.ToolbarItems>
@@ -13,14 +13,41 @@
     </ContentPage.ToolbarItems>
 
     <StackLayout>
-        <Picker x:Name="picker" Title="Выбери величину" FontSize="Large" SelectedIndexChanged="Picker_SelectedIndexChanged">
-            <Picker.Items>
-                <x:String>Метры</x:String>
-                <x:String>Километры</x:String>
-                <x:String>Ярды</x:String>
-            </Picker.Items>
-        </Picker>
-        <Label x:Name="Debug" Text="Debug" FontSize="20" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>
+        <StackLayout Orientation="Vertical">
+            <Picker x:Name="TopPicker" Title="Выбери величину" FontSize="Large" SelectedIndexChanged="TopPicker_SelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>Метры</x:String>
+                    <x:String>Километры</x:String>
+                    <x:String>Ярды</x:String>
+                    <x:String>Килоярды</x:String>
+                    <x:String>Футы</x:String>
+                </Picker.Items>
+            </Picker>
+            <Editor x:Name="TopEditor" AutoSize="TextChanges" TextChanged="TopEditor_TextChanged" Keyboard="Numeric" />
+        </StackLayout>
+        
+        <Label x:Name="TopDebug" Text="Debug line" FontSize="20" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>
+
+        <StackLayout Orientation="Vertical">
+            <Picker x:Name="BotPicker" Title="Выбери величину" FontSize="Large" SelectedIndexChanged="BotPicker_SelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>Метры</x:String>
+                    <x:String>Километры</x:String>
+                    <x:String>Ярды</x:String>
+                    <x:String>Килоярды</x:String>
+                    <x:String>Футы</x:String>
+                </Picker.Items>
+            </Picker>
+            <Editor x:Name="BotEditor" AutoSize="TextChanges" TextChanged="BotEditor_TextChanged" Keyboard="Numeric" />
+        </StackLayout>
+
+        <Label x:Name="BotDebug" Text="Debug line" FontSize="20" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+            <ContentView Padding="0,50,0,50" VerticalOptions="Center">
+                <Image Source="cute_dick_runs.png" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="450" />
+            </ContentView>
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>
