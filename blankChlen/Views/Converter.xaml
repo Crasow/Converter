@@ -23,7 +23,7 @@
                     <x:String>Футы</x:String>
                 </Picker.Items>
             </Picker>
-            <Editor x:Name="TopEditor" AutoSize="TextChanges" TextChanged="TopEditor_TextChanged" Keyboard="Numeric" />
+            <Editor x:Name="TopEditor" AutoSize="TextChanges" TextChanged="TopEditor_TextChanged" Keyboard="Numeric" PlaceholderColor="White" />
         </StackLayout>
         
         <Label x:Name="TopDebug" Text="Debug line" FontSize="20" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>
@@ -38,7 +38,7 @@
                     <x:String>Футы</x:String>
                 </Picker.Items>
             </Picker>
-            <Editor x:Name="BotEditor" AutoSize="TextChanges" TextChanged="BotEditor_TextChanged" Keyboard="Numeric" />
+            <Editor x:Name="BotEditor" AutoSize="TextChanges" TextChanged="BotEditor_TextChanged" Keyboard="Numeric" PlaceholderColor="White" />
         </StackLayout>
 
         <Label x:Name="BotDebug" Text="Debug line" FontSize="20" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>

@@ -59,6 +59,7 @@ namespace blankChlen.Views
         private void TopEditor_TextChanged(object sender, TextChangedEventArgs e)
         {
             double userNum = Get_User_Num(TopEditor.Text);
+            BotEditor.Text = "";
             switch (topPickerValue)
             {
                 case "Метры":
@@ -168,6 +169,7 @@ namespace blankChlen.Views
         private void BotEditor_TextChanged(object sender, TextChangedEventArgs e)
         {
             double userNum = Get_User_Num(BotEditor.Text);
+            TopEditor.Text = "";
             switch (botPickerValue)
             {
                 case "Метры":
