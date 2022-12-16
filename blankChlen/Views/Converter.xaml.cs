@@ -286,14 +286,12 @@ namespace blankChlen.Views
 
         private void TopPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TopDebug.Text = "Вы выбрали: " + TopPicker.Items[TopPicker.SelectedIndex];
             topPickerValue = TopPicker.Items[TopPicker.SelectedIndex];
 
         }
 
         private void BotPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            BotDebug.Text = "Вы выбрали: " + BotPicker.Items[BotPicker.SelectedIndex];
             botPickerValue = BotPicker.Items[BotPicker.SelectedIndex];
         }
 
@@ -305,6 +303,18 @@ namespace blankChlen.Views
         private void BotEditor_Focused(object sender, FocusEventArgs e)
         {
             isFocused = "bot";
+        }
+
+        private void AddConverterSample_Clicked(object sender, EventArgs e)
+        {
+            StackLayout newLay = new StackLayout { BackgroundColor = Color.White, HeightRequest = 150};
+            Label labla = new Label { Text = "Somebody poo", VerticalTextAlignment = TextAlignment.Start,
+                VerticalOptions = LayoutOptions.Start, TextColor = Color.Black };
+            newLay.Children.Add(labla);
+            MainLayout.Children.Add(newLay);
+            MainLayout.Children.Add(botter);
+            MainLayout.Children.Add(topper);
+
         }
     }
 }

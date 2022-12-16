@@ -1,54 +1,84 @@
-﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="blankChlen.Views.ConverterPage"
-             BackgroundColor="#1C1C1E"
-             Title="Конверт">
-    
+﻿<ContentPage
+    x:Class="blankChlen.Views.ConverterPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Конверт"
+    BackgroundColor="#1C1C1E"
+    mc:Ignorable="d">
+
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="ADD"/>
+        <ToolbarItem Text="ADD" />
     </ContentPage.ToolbarItems>
 
-    <StackLayout>
-        <StackLayout Orientation="Vertical">
-            <Picker x:Name="TopPicker" Title="Выбери величину" FontSize="Large" SelectedIndexChanged="TopPicker_SelectedIndexChanged">
-                <Picker.Items>
-                    <x:String>Метры</x:String>
-                    <x:String>Километры</x:String>
-                    <x:String>Ярды</x:String>
-                    <x:String>Килоярды</x:String>
-                    <x:String>Футы</x:String>
-                </Picker.Items>
-            </Picker>
-            <Editor x:Name="TopEditor" AutoSize="TextChanges" Focused="TopEditor_Focused" 
-                    TextChanged="TopEditor_TextChanged" Keyboard="Numeric" PlaceholderColor="White" />
+    <ScrollView>
+        <StackLayout x:Name="MainLayout">
+            <Button
+                x:Name="AddConverterSample"
+                BackgroundColor="DeepPink"
+                Clicked="AddConverterSample_Clicked"
+                Text="Add Converter"
+                TextColor="Black" />
+
+            <StackLayout x:Name="ConvertorSample">
+
+                <StackLayout x:Name="topper" Orientation="Horizontal">
+                    <Picker
+                        x:Name="TopPicker"
+                        Title="Выбери величину"
+                        FontSize="Large"
+                        SelectedIndexChanged="TopPicker_SelectedIndexChanged">
+                        <Picker.Items>
+                            <x:String>Метры</x:String>
+                            <x:String>Километры</x:String>
+                            <x:String>Ярды</x:String>
+                            <x:String>Килоярды</x:String>
+                            <x:String>Футы</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Editor
+                        x:Name="TopEditor"
+                        AutoSize="TextChanges"
+                        Focused="TopEditor_Focused"
+                        Keyboard="Numeric"
+                        Placeholder="Тык"
+                        TextChanged="TopEditor_TextChanged" />
+                </StackLayout>
+
+
+                <StackLayout x:Name="botter" Orientation="Horizontal">
+                    <Picker
+                        x:Name="BotPicker"
+                        Title="Выбери величину"
+                        FontSize="Large"
+                        SelectedIndexChanged="BotPicker_SelectedIndexChanged">
+                        <Picker.Items>
+                            <x:String>Метры</x:String>
+                            <x:String>Километры</x:String>
+                            <x:String>Ярды</x:String>
+                            <x:String>Килоярды</x:String>
+                            <x:String>Футы</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Editor
+                        x:Name="BotEditor"
+                        AutoSize="TextChanges"
+                        Focused="BotEditor_Focused"
+                        Keyboard="Numeric"
+                        Placeholder="Тык"
+                        TextChanged="BotEditor_TextChanged" />
+                </StackLayout>
+            </StackLayout>
+
+            <!--<ContentView Padding="0,50,0,50" VerticalOptions="Center">
+                <Image
+                    HeightRequest="450"
+                    HorizontalOptions="Center"
+                    Source="cute_dick_runs.png"
+                    VerticalOptions="Center" />
+            </ContentView>-->
         </StackLayout>
-        
-        <Label x:Name="TopDebug" Text="Debug line" FontSize="20" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>
-
-        <StackLayout Orientation="Vertical">
-            <Picker x:Name="BotPicker" Title="Выбери величину" FontSize="Large" SelectedIndexChanged="BotPicker_SelectedIndexChanged">
-                <Picker.Items>
-                    <x:String>Метры</x:String>
-                    <x:String>Километры</x:String>
-                    <x:String>Ярды</x:String>
-                    <x:String>Килоярды</x:String>
-                    <x:String>Футы</x:String>
-                </Picker.Items>
-            </Picker>
-            <Editor x:Name="BotEditor" AutoSize="TextChanges" Focused="BotEditor_Focused" TextChanged="BotEditor_TextChanged" Keyboard="Numeric" PlaceholderColor="White" />
-        </StackLayout>
-
-        <Label x:Name="BotDebug" Text="Debug line" FontSize="20" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>
-
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-            <ContentView Padding="0,50,0,50" VerticalOptions="Center">
-                <Image Source="cute_dick_runs.png" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="450" />
-            </ContentView>
-        </StackLayout>
-    </StackLayout>
-
+    </ScrollView>
 </ContentPage>

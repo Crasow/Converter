@@ -20,18 +20,18 @@ namespace blankChlen
 
         private void ChatPage_Focused(object sender, FocusEventArgs e)
         {
-            Tabber.Title = "Чат";
+            
         }
 
         private void CallPage_Focused(object sender, FocusEventArgs e)
         {
-            Tabber.Title = "Звонки";
+            this.Title = "Звонки";
 
         }
 
         private void CallPage_Focused_1(object sender, FocusEventArgs e)
         {
-            Tabber.Title = "Карта";
+            this.Title = "Карта";
 
         }
 

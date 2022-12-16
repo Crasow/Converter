@@ -1,38 +1,33 @@
-<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
-       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local ="clr-namespace:blankChlen"
-       Title="blankChlen"
-       x:Class="blankChlen.AppShell">
-
-    <!--<FlyoutItem Title="MainPage">
-        <Tab>
-            <ShellContent Title="Чат" Icon="xxx.png" ContentTemplate="{DataTemplate local:ChatPage}" />
-            <ShellContent Title="Звонки" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:ItemsPage}"/>
-            <ShellContent Title="Карта" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:ItemsPage}"/>
-            <ShellContent Title="Конвертер" ContentTemplate="{DataTemplate local:ConverterPage}" />
-        </Tab>
-    </FlyoutItem>-->
+<Shell
+    x:Class="blankChlen.AppShell"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:blankChlen"
+    Title="blankChlen">
 
     <FlyoutItem Title="Main">
-        <ShellContent Title="Chat" Route="MainTabbedPage" ContentTemplate="{DataTemplate local:MainTabbedPage}"></ShellContent>
+        <ShellContent
+            Title="Chat"
+            ContentTemplate="{DataTemplate local:MainTabbedPage}"
+            Route="MainTabbedPage" />
     </FlyoutItem>
 
     <FlyoutItem Title="Settings">
         <ShellContent>
-            <ContentPage Title="Settings"/>
+            <ContentPage Title="Settings" />
         </ShellContent>
     </FlyoutItem>
     <FlyoutItem Title="Porn">
         <ShellContent>
-            <ContentPage Title="Porn"/>
+            <ContentPage Title="Porn" />
         </ShellContent>
     </FlyoutItem>
     <FlyoutItem Title="Fuck">
         <ShellContent>
-            <ContentPage Title="Fuck"/>
+            <ContentPage Title="Fuck" />
         </ShellContent>
     </FlyoutItem>
-    
+
 
     <Shell.Resources>
         <ResourceDictionary>
@@ -43,12 +38,12 @@
                 <Setter Property="Shell.DisabledColor" Value="#95FFFFFF" />
                 <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
                 <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
-                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
-                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
-                <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource TextColor}"/>
+                <Setter Property="Shell.TabBarForegroundColor" Value="White" />
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource TextColor}" />
             </Style>
-            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
-            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+            <Style BasedOn="{StaticResource BaseStyle}" TargetType="TabBar" />
+            <Style BasedOn="{StaticResource BaseStyle}" TargetType="FlyoutItem" />
         </ResourceDictionary>
     </Shell.Resources>
 

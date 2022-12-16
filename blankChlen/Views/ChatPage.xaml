@@ -1,15 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="blankChlen.Views.ChatPage"
-             xmlns:vm="clr-namespace:blankChlen.ViewModels"
-             BackgroundColor="#1C1C1E"
-             Title="Чат">
-    
+<ContentPage
+    x:Class="blankChlen.Views.ChatPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:blankChlen.ViewModels"
+    Title="Чат"
+    BackgroundColor="#1C1C1E">
+
     <ContentPage.BindingContext>
-        <vm:ChatViewModel/>
+        <vm:ChatViewModel />
     </ContentPage.BindingContext>
-    
+
     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Accent">gray</Color>
@@ -21,16 +22,28 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                <ContentView Padding="0,50,0,50" VerticalOptions="Center">
-                    <Image Source="cute_dick.png" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="400" />
-                </ContentView>
-            </StackLayout>
-            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
-                <Button Margin="0,500,0,0" Text="Не работает, но прикольно можно пожмакать "
-                        BackgroundColor="DeepPink"
-                        TextColor="Black" />
-            </StackLayout>
+        <StackLayout
+            HorizontalOptions="Center"
+            Orientation="Horizontal"
+            VerticalOptions="Center">
+            <ContentView Padding="0,50,0,50" VerticalOptions="Center">
+                <Image
+                    HeightRequest="400"
+                    HorizontalOptions="Center"
+                    Source="cute_dick.png"
+                    VerticalOptions="Center" />
+            </ContentView>
+        </StackLayout>
+        <StackLayout
+            Padding="30,24,30,24"
+            Orientation="Vertical"
+            Spacing="10">
+            <Button
+                Margin="0,500,0,0"
+                BackgroundColor="DeepPink"
+                Text="Не работает, но прикольно можно пожмакать "
+                TextColor="Black" />
+        </StackLayout>
     </Grid>
 
 </ContentPage>
