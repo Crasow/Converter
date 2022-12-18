@@ -39,5 +39,10 @@ namespace blankChlen
         {
             Tabber.Title = "Конвертер";
         }
+
+        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -10,7 +10,10 @@
     SelectedTabColor="White"
     UnselectedTabColor="White">
 
-
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Text="ADD" Clicked="ToolbarItem_Clicked" IconImageSource="" />
+    </TabbedPage.ToolbarItems>
+    
     <TabbedPage.Children>
         <local:ConverterPage Focused="ConverterPage_Focused" IconImageSource="MathOperations.svg" />
         <local:ChatPage Focused="ChatPage_Focused" IconImageSource="ChatCircleText.svg" />

@@ -307,13 +307,6 @@ namespace blankChlen.Views
 
         private void AddConverterSample_Clicked(object sender, EventArgs e)
         {
-            StackLayout newLay = new StackLayout { BackgroundColor = Color.White, HeightRequest = 150};
-            Label labla = new Label { Text = "Somebody poo", VerticalTextAlignment = TextAlignment.Start,
-                VerticalOptions = LayoutOptions.Start, TextColor = Color.Black };
-            newLay.Children.Add(labla);
-            MainLayout.Children.Add(newLay);
-            MainLayout.Children.Add(botter);
-            MainLayout.Children.Add(topper);
 
         }
     }
