@@ -10,17 +10,17 @@
 
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="ADD" />
+        <ToolbarItem Text="+" />
     </ContentPage.ToolbarItems>
 
     <ScrollView>
         <StackLayout x:Name="MainLayout">
             <Button
-                x:Name="AddConverterSample"
+                x:Name="AddConverterBtn"
                 BackgroundColor="DeepPink"
-                Clicked="AddConverterSample_Clicked"
+                Clicked="AddConverter_Clicked"
                 Text="Add Converter"
-                TextColor="Black" />
+                TextColor="Black"/>
 
             <StackLayout x:Name="ConvertorSample">
 

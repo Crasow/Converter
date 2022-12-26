@@ -12,37 +12,19 @@ namespace blankChlen
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainTabbedPage : TabbedPage
     {
+        static public string focusedPageName;
         public MainTabbedPage()
         {
             InitializeComponent();
-
         }
 
-        private void ChatPage_Focused(object sender, FocusEventArgs e)
-        {
-            
-        }
 
-        private void CallPage_Focused(object sender, FocusEventArgs e)
-        {
-            this.Title = "Звонки";
 
-        }
-
-        private void CallPage_Focused_1(object sender, FocusEventArgs e)
-        {
-            this.Title = "Карта";
-
-        }
-
-        private void ConverterPage_Focused(object sender, FocusEventArgs e)
-        {
-            Tabber.Title = "Конвертер";
-        }
-
-        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        private void AddButton_Clicked(object sender, EventArgs e)
         {
 
         }
+
+
     }
 }

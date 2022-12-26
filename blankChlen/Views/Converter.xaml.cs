@@ -12,29 +12,9 @@ namespace blankChlen.Views
         {
             InitializeComponent();
             this.BindingContext = new ConverterViewModel();
+
         }
 
-        Label header;
-        //Xamarin.Forms.Picker picker;
-
-        public void Main()
-        {
-            header = new Label
-            {
-                Text = "Выберите язык",
-                FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label))
-            };
-
-            //Xamarin.Forms.Picker picker = new Xamarin.Forms.Picker
-            //picker.Items.Add("Ярд");
-            //picker.Items.Add("КилоЯрд");
-            //picker.Items.Add("Футы");
-            //picker.Items.Add("М");
-            //picker.Items.Add("Км");
-
-
-            //this.Content = new StackLayout { Children = { header, picker } };
-        }
 
         string topPickerValue;
         string botPickerValue;
@@ -51,8 +31,73 @@ namespace blankChlen.Views
 
             return result;
         }
+        
 
         private void TopEditor_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TopPickerFunc();
+        }
+
+        private void BotEditor_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            BotPickerFunc();
+        }
+
+        private void TopPicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            topPickerValue = TopPicker.Items[TopPicker.SelectedIndex];
+            TopPickerFunc();
+        }
+
+        private void BotPicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            botPickerValue = BotPicker.Items[BotPicker.SelectedIndex];
+            BotPickerFunc();
+        }
+
+        private void TopEditor_Focused(object sender, FocusEventArgs e)
+        {
+            isFocused = "top";
+        }
+
+        private void BotEditor_Focused(object sender, FocusEventArgs e)
+        {
+            isFocused = "bot";
+        }
+
+        private void AddConverter_Clicked(object sender, EventArgs e)
+        {
+            StackLayout NewConvertor = new StackLayout();
+
+            StackLayout TopPart = new StackLayout
+            {
+                Orientation = StackOrientation.Horizontal
+            };
+
+            StackLayout BotPart = new StackLayout
+            {
+                Orientation = StackOrientation.Horizontal
+            };
+
+            Picker TopPicker = new Picker
+            {
+                Title = "Выбери величину",
+                FontSize = 20,
+                Se
+
+            }
+
+
+
+
+            MainLayout.Children.Add(TopPart);
+            MainLayout.Children.Add(BotPart);
+        }
+
+
+
+
+        private void TopPickerFunc()
         {
             double userNum = Get_User_Num(TopEditor.Text);
             if (userNum == -1)
@@ -163,12 +208,11 @@ namespace blankChlen.Views
                                 break;
                         }
                         break;
-
                 }
             }
         }
 
-        private void BotEditor_TextChanged(object sender, TextChangedEventArgs e)
+        private void BotPickerFunc()
         {
             double userNum = Get_User_Num(BotEditor.Text);
             if (userNum == -1)
@@ -279,35 +323,10 @@ namespace blankChlen.Views
                                 break;
                         }
                         break;
-
                 }
             }
         }
 
-        private void TopPicker_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            topPickerValue = TopPicker.Items[TopPicker.SelectedIndex];
 
-        }
-
-        private void BotPicker_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            botPickerValue = BotPicker.Items[BotPicker.SelectedIndex];
-        }
-
-        private void TopEditor_Focused(object sender, FocusEventArgs e)
-        {
-            isFocused = "top";
-        }
-
-        private void BotEditor_Focused(object sender, FocusEventArgs e)
-        {
-            isFocused = "bot";
-        }
-
-        private void AddConverterSample_Clicked(object sender, EventArgs e)
-        {
-
-        }
     }
 }

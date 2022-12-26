@@ -11,14 +11,17 @@
     UnselectedTabColor="White">
 
     <TabbedPage.ToolbarItems>
-        <ToolbarItem Text="ADD" Clicked="ToolbarItem_Clicked" IconImageSource="" />
+        <ToolbarItem
+            Clicked="AddButton_Clicked"
+            IconImageSource=""
+            Text="ADD" />
     </TabbedPage.ToolbarItems>
-    
+
     <TabbedPage.Children>
-        <local:ConverterPage Focused="ConverterPage_Focused" IconImageSource="MathOperations.svg" />
-        <local:ChatPage Focused="ChatPage_Focused" IconImageSource="ChatCircleText.svg" />
-        <local:CallPage Focused="CallPage_Focused" IconImageSource="PhoneCall.svg" />
-        <local:CallPage Focused="CallPage_Focused_1" IconImageSource="MapTrifold.svg" />
+        <local:ConverterPage IconImageSource="MathOperations.svg" />
+        <local:ChatPage IconImageSource="ChatCircleText.svg" />
+        <local:CallPage IconImageSource="PhoneCall.svg" />
+        <local:CallPage IconImageSource="MapTrifold.svg" />
     </TabbedPage.Children>
 
 </TabbedPage>

@@ -863,19 +863,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nikol\\.nuget\\packages\\": {}
+    "C:\\Users\\olari\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nikol\\Desktop\\!Code\\Xamarin\\Converter\\blankChlen\\blankChlen.csproj",
+      "projectUniqueName": "C:\\Crasow\\.Code\\Xamarin\\Converter\\blankChlen\\blankChlen.csproj",
       "projectName": "blankChlen",
-      "projectPath": "C:\\Users\\Nikol\\Desktop\\!Code\\Xamarin\\Converter\\blankChlen\\blankChlen.csproj",
-      "packagesPath": "C:\\Users\\Nikol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nikol\\Desktop\\!Code\\Xamarin\\Converter\\blankChlen\\obj\\",
+      "projectPath": "C:\\Crasow\\.Code\\Xamarin\\Converter\\blankChlen\\blankChlen.csproj",
+      "packagesPath": "C:\\Users\\olari\\.nuget\\packages\\",
+      "outputPath": "C:\\Crasow\\.Code\\Xamarin\\Converter\\blankChlen\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Nikol\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\olari\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -931,7 +931,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nikol\\Desktop\\!Code\\Xamarin\\Converter\\blankChlen.Android\\blankChlen.Android.csproj": {}
+    "C:\\Crasow\\.Code\\Xamarin\\Converter\\blankChlen.Android\\blankChlen.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nikol\\Desktop\\!Code\\Xamarin\\Converter\\blankChlen.Android\\blankChlen.Android.csproj": {
+    "C:\\Crasow\\.Code\\Xamarin\\Converter\\blankChlen.Android\\blankChlen.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nikol\\Desktop\\!Code\\Xamarin\\Converter\\blankChlen.Android\\blankChlen.Android.csproj",
+        "projectUniqueName": "C:\\Crasow\\.Code\\Xamarin\\Converter\\blankChlen.Android\\blankChlen.Android.csproj",
         "projectName": "blankChlen.Android",
-        "projectPath": "C:\\Users\\Nikol\\Desktop\\!Code\\Xamarin\\Converter\\blankChlen.Android\\blankChlen.Android.csproj",
-        "packagesPath": "C:\\Users\\Nikol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nikol\\Desktop\\!Code\\Xamarin\\Converter\\blankChlen.Android\\obj\\",
+        "projectPath": "C:\\Crasow\\.Code\\Xamarin\\Converter\\blankChlen.Android\\blankChlen.Android.csproj",
+        "packagesPath": "C:\\Users\\olari\\.nuget\\packages\\",
+        "outputPath": "C:\\Crasow\\.Code\\Xamarin\\Converter\\blankChlen.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "C:\\Users\\Nikol\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\olari\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
         "frameworks": {
           "monoandroid12.0": {
             "projectReferences": {
-              "C:\\Users\\Nikol\\Desktop\\!Code\\Xamarin\\Converter\\blankChlen\\blankChlen.csproj": {
-                "projectPath": "C:\\Users\\Nikol\\Desktop\\!Code\\Xamarin\\Converter\\blankChlen\\blankChlen.csproj"
+              "C:\\Crasow\\.Code\\Xamarin\\Converter\\blankChlen\\blankChlen.csproj": {
+                "projectPath": "C:\\Crasow\\.Code\\Xamarin\\Converter\\blankChlen\\blankChlen.csproj"
               }
             }
           }
@@ -54,17 +54,17 @@
         }
       }
     },
-    "C:\\Users\\Nikol\\Desktop\\!Code\\Xamarin\\Converter\\blankChlen\\blankChlen.csproj": {
+    "C:\\Crasow\\.Code\\Xamarin\\Converter\\blankChlen\\blankChlen.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nikol\\Desktop\\!Code\\Xamarin\\Converter\\blankChlen\\blankChlen.csproj",
+        "projectUniqueName": "C:\\Crasow\\.Code\\Xamarin\\Converter\\blankChlen\\blankChlen.csproj",
         "projectName": "blankChlen",
-        "projectPath": "C:\\Users\\Nikol\\Desktop\\!Code\\Xamarin\\Converter\\blankChlen\\blankChlen.csproj",
-        "packagesPath": "C:\\Users\\Nikol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nikol\\Desktop\\!Code\\Xamarin\\Converter\\blankChlen\\obj\\",
+        "projectPath": "C:\\Crasow\\.Code\\Xamarin\\Converter\\blankChlen\\blankChlen.csproj",
+        "packagesPath": "C:\\Users\\olari\\.nuget\\packages\\",
+        "outputPath": "C:\\Crasow\\.Code\\Xamarin\\Converter\\blankChlen\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Nikol\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\olari\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -120,7 +120,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
