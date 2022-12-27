@@ -22,7 +22,7 @@
                 Text="Add Converter"
                 TextColor="Black"/>
 
-            <StackLayout x:Name="ConvertorSample">
+            <!--<StackLayout x:Name="ConvertorSample">
 
                 <StackLayout x:Name="topper" Orientation="Horizontal">
                     <Picker
@@ -70,15 +70,15 @@
                         Placeholder="Тык"
                         TextChanged="BotEditor_TextChanged" />
                 </StackLayout>
-            </StackLayout>
+            </StackLayout>-->
 
-            <!--<ContentView Padding="0,50,0,50" VerticalOptions="Center">
+            <ContentView Padding="0,50,0,50" VerticalOptions="Center">
                 <Image
                     HeightRequest="450"
                     HorizontalOptions="Center"
                     Source="cute_dick_runs.png"
                     VerticalOptions="Center" />
-            </ContentView>-->
+            </ContentView>
         </StackLayout>
     </ScrollView>
 </ContentPage>

@@ -1,5 +1,6 @@
 ﻿using blankChlen.ViewModels;
 using System;
+using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -31,7 +32,7 @@ namespace blankChlen.Views
 
             return result;
         }
-        
+
 
         private void TopEditor_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -65,8 +66,13 @@ namespace blankChlen.Views
             isFocused = "bot";
         }
 
+        
+
         private void AddConverter_Clicked(object sender, EventArgs e)
         {
+            List<string> units = new List<string>()
+        { "Метры", "Километры", "Ярды", "Килоярды", "Футы" };
+
             StackLayout NewConvertor = new StackLayout();
 
             StackLayout TopPart = new StackLayout
@@ -74,27 +80,69 @@ namespace blankChlen.Views
                 Orientation = StackOrientation.Horizontal
             };
 
+
+ 
+            Xamarin.Forms.Picker TopPicker = new Xamarin.Forms.Picker
+            {
+                Title = "Выбери величину",
+                FontSize = 20,
+            };
+
+            foreach (string unit in units)
+            { TopPicker.Items.Add(unit); }
+
+            Editor TopEditor = new Editor()
+            {
+                AutoSize = EditorAutoSizeOption.TextChanges,
+                Keyboard = Keyboard.Numeric,
+                Placeholder = "Тык",
+            };
+
+
+            TopPart.Children.Add(TopPicker);
+            TopPart.Children.Add(TopEditor);
+
+
             StackLayout BotPart = new StackLayout
             {
                 Orientation = StackOrientation.Horizontal
             };
 
-            Picker TopPicker = new Picker
+            Xamarin.Forms.Picker BotPicker = new Xamarin.Forms.Picker
             {
                 Title = "Выбери величину",
                 FontSize = 20,
-                Se
+            };
 
-            }
+            foreach (string unit in units)
+            { BotPicker.Items.Add(unit); }
+
+            Editor BotEditor = new Editor()
+            {
+                AutoSize = EditorAutoSizeOption.TextChanges,
+                Keyboard = Keyboard.Numeric,
+                Placeholder = "Тык",
+            };
 
 
+            BotPart.Children.Add(BotPicker);
+            BotPart.Children.Add(BotEditor);
 
+            NewConvertor.Children.Add(TopPart);
+            NewConvertor.Children.Add(BotPart);
 
-            MainLayout.Children.Add(TopPart);
-            MainLayout.Children.Add(BotPart);
+            MainLayout.Children.Add(NewConvertor);
+
+            TopPicker.SelectedIndexChanged += TopPicker_SelectedIndexChanged;
+            TopEditor.TextChanged += TopEditor_TextChanged;
+            TopEditor.Focused += TopEditor_Focused;
+
+            BotPicker.SelectedIndexChanged += BotPicker_SelectedIndexChanged;
+            BotEditor.TextChanged += BotEditor_TextChanged;
+            BotEditor.Focused += BotEditor_Focused;
+            
+
         }
-
-
 
 
         private void TopPickerFunc()
@@ -211,6 +259,8 @@ namespace blankChlen.Views
                 }
             }
         }
+
+
 
         private void BotPickerFunc()
         {
